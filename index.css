@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@config "./tailwind.config.js";
+
+@layer base {
+    body {
+        @apply bg-dark-900 text-gray-200 font-sans;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-display;
+    }
+}
+
+@layer components {
+    .glass-card {
+        background: rgba(18, 18, 21, 0.6);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .glass-panel {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .gradient-text {
+        background: linear-gradient(to right, #3385ff, #06b6d4);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .grid-bg {
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 50px 50px;
+        mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+        -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+    }
+
+    .neon-border {
+        box-shadow: 0 0 5px rgba(0, 95, 255, 0.5), inset 0 0 20px rgba(0, 95, 255, 0.1);
+    }
+
+    .perspective-1000 {
+        perspective: 1000px;
+    }
+
+    .rotate-x-12 {
+        transform: rotateX(12deg);
+    }
+
+    .rotate-x-0 {
+        transform: rotateX(0deg);
+    }
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #030305;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1c1c21;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #005FFF;
+}

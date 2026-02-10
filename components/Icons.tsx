@@ -1,0 +1,46 @@
+import React from 'react';
+import { 
+  Bot, 
+  Zap, 
+  ShieldCheck, 
+  Layers, 
+  ArrowRight, 
+  TrendingUp, 
+  Globe, 
+  Cpu, 
+  MessageSquare,
+  BarChart3,
+  Lock,
+  Search,
+  CheckCircle2,
+  Menu,
+  X,
+  Terminal,
+  Command,
+  Loader2,
+  GitMerge,
+  DollarSign
+} from 'lucide-react';
+
+export const Icons = {
+  Bot, 
+  Zap, 
+  ShieldCheck, 
+  Layers, 
+  ArrowRight, 
+  TrendingUp, 
+  Globe, 
+  Cpu, 
+  MessageSquare,
+  BarChart3,
+  Lock,
+  Search,
+  CheckCircle2,
+  Menu,
+  X,
+  Terminal,
+  Command,
+  Loader2,
+  GitMerge,
+  DollarSign
+};
