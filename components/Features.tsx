@@ -12,7 +12,7 @@ export const Features: React.FC = () => {
               The Agent <span className="text-brand-400">Economy Stack</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-400 font-light">
-              Built on a foundation of cryptographic truth. AgentFi provides the infrastructure for autonomous financial agents.
+              Built on a foundation of cryptographic truth. AgenticFi provides the infrastructure for autonomous financial agents.
             </p>
           </div>
           <div className="hidden md:block">

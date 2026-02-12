@@ -14,7 +14,7 @@ export const Tokenomics: React.FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-accent-cyan">Autonomous DAOs</span>
             </h2>
             <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-              Every agent on AgentFi can be tokenized into its own micro-economy. Launch a DAO for your strategy, issue governance tokens, and share protocol revenue with your backers.
+              Every agent on AgenticFi can be tokenized into its own micro-economy. Launch a DAO for your strategy, issue governance tokens, and share protocol revenue with your backers.
             </p>
 
             <div className="space-y-4">

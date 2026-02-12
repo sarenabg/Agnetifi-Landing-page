@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
               <div className="w-10 h-10 rounded-2xl bg-brand-500 flex items-center justify-center shadow-[0_0_15px_rgba(122,64,255,0.4)]">
                 <Icons.Bot className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-semibold text-white font-display">AgentFi</span>
+              <span className="text-xl font-semibold text-white font-display">AgenticFi</span>
             </a>
             <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
               The first decentralized platform for agentic finance. Secure, automated, and governed by you.
@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-600 text-sm">© 2025 AgentFi Protocol. All rights reserved.</p>
+          <p className="text-gray-600 text-sm">© 2025 AgenticFi Protocol. All rights reserved.</p>
           <div className="flex gap-4">
              <span className="relative flex h-2 w-2">
                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>

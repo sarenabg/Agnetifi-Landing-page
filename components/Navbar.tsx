@@ -23,7 +23,7 @@ export const Navbar: React.FC = () => {
             <div className="w-10 h-10 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-brand-400/50 group-hover:bg-brand-400/10 transition-colors">
               <Icons.Bot className="w-6 h-6 text-brand-400" />
             </div>
-            <span className="self-center text-lg font-bold whitespace-nowrap text-white tracking-tight font-display">Agent<span className="text-brand-400">Fi</span></span>
+            <span className="self-center text-lg font-bold whitespace-nowrap text-white tracking-tight font-display">Agentic<span className="text-brand-400">Fi</span></span>
           </a>
 
           {/* Desktop Menu */}
