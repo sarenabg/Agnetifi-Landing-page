@@ -1,80 +1,223 @@
 import React from 'react';
-import { Icons } from './Icons';
+
+const comparisonRows = [
+  {
+    capability: 'DeFi-native focus',
+    olas: 'No (generic purpose)',
+    virtuals: 'No (entertainment-first)',
+    theoriq: 'Yes',
+    agenticfi: 'Yes',
+  },
+  {
+    capability: 'Competitive intent marketplace',
+    olas: 'No',
+    virtuals: 'No',
+    theoriq: 'No',
+    agenticfi: 'Yes',
+  },
+  {
+    capability: 'On-chain reputation',
+    olas: 'No',
+    virtuals: 'No',
+    theoriq: 'No',
+    agenticfi: 'Yes (ERC-8004)',
+  },
+  {
+    capability: 'Performance-backed tokenization',
+    olas: 'No',
+    virtuals: 'Speculation-led',
+    theoriq: 'No',
+    agenticfi: 'Yes',
+  },
+  {
+    capability: 'Progressive trust modes',
+    olas: 'No',
+    virtuals: 'No',
+    theoriq: 'No',
+    agenticfi: 'Yes',
+  },
+  {
+    capability: 'Cross-chain coverage',
+    olas: '9 chains',
+    virtuals: '3 chains',
+    theoriq: 'ETH only',
+    agenticfi: '6 chains',
+  },
+  {
+    capability: 'Manual + Autonomous + CLI',
+    olas: 'No',
+    virtuals: 'No',
+    theoriq: 'No',
+    agenticfi: 'Yes',
+  },
+];
+
+const roadmap = [
+  {
+    week: 'Weeks 1-4',
+    items: [
+      'Marketplace UI completion',
+      'Intent auction system live',
+      'Yield optimizer hardening',
+      'Staking and slashing activation',
+    ],
+  },
+  {
+    week: 'Weeks 5-8',
+    items: [
+      'Multi-agent orchestration',
+      'Circuit breakers and insurance pool',
+      'Gasless transactions and trading agents',
+      'Prediction market agent rollout',
+    ],
+  },
+  {
+    week: 'Weeks 9-12',
+    items: [
+      'Performance benchmark suite',
+      'Privacy layer delivery',
+      'Agent-to-agent commerce protocol',
+      'Enterprise API and full autonomous suite',
+    ],
+  },
+];
+
+const revenueScenarios = [
+  { volume: '$10M / day', annualized: '$365K' },
+  { volume: '$100M / day', annualized: '$3.65M' },
+  { volume: '$500M / day', annualized: '$18.25M' },
+];
 
 export const Tokenomics: React.FC = () => {
   return (
-    <section id="tokenomics" className="py-32 bg-dark-900 relative overflow-hidden">
+    <section id="tokenomics" className="py-24 md:py-32 bg-dark-800 border-t border-white/5">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-          <div>
-            <div className="text-brand-400 font-mono text-sm mb-4">AGENT_ECONOMY: ACTIVATED</div>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-white">
-              Sovereign Agents & <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-accent-cyan">Autonomous DAOs</span>
-            </h2>
-            <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-              Every agent on AgenticFi can be tokenized into its own micro-economy. Launch a DAO for your strategy, issue governance tokens, and share protocol revenue with your backers.
-            </p>
-
-            <div className="space-y-4">
-              {[
-                { title: "Agent Tokenization", val: "ERC-20", desc: "Launch dedicated tokens for any sub-agent" },
-                { title: "Revenue Sharing", val: "Programmable", desc: "Automated yield distribution to token holders" },
-                { title: "DAO Governance", val: "On-chain", desc: "Backers vote on strategy risk & parameters" }
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-6 p-5 rounded-3xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors">
-                  <div className="text-2xl font-bold font-mono text-brand-400 w-44 shrink-0">{item.val}</div>
-                  <div>
-                    <h4 className="text-white font-bold">{item.title}</h4>
-                    <p className="text-sm text-gray-500">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="relative">
-            {/* Abstract Graph Visualization */}
-            <div className="glass-panel p-6 md:p-10 rounded-[2.5rem] border border-white/10 shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-32 bg-brand-500/10 blur-[80px] rounded-full pointer-events-none"></div>
-
-              <div className="flex justify-between items-center mb-8 relative z-10">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center">
-                    <Icons.DollarSign className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="font-display font-bold text-xl text-white">Revenue Stream</h3>
-                </div>
-                <div className="flex gap-2">
-                  <span className="w-3 h-3 rounded-full bg-red-500"></span>
-                  <span className="w-3 h-3 rounded-full bg-gray-600"></span>
-                </div>
-              </div>
-
-              {/* CSS Chart representation */}
-              <div className="flex items-end gap-1.5 h-64 w-full mb-8">
-                {[35, 42, 38, 55, 48, 62, 75, 68, 85, 90, 82, 95].map((h, i) => (
-                  <div key={i} className="flex-1 bg-dark-800 rounded-t-lg relative group overflow-hidden">
-                    <div className="absolute bottom-0 left-0 w-full bg-brand-500/80 transition-all duration-1000 group-hover:bg-brand-400" style={{ height: `${h}%` }}></div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="grid grid-cols-2 gap-4 relative z-10">
-                <div className="bg-dark-900/80 p-5 rounded-2xl border border-white/5">
-                  <p className="text-xs text-gray-500 uppercase font-mono mb-1">Staked TVL</p>
-                  <p className="font-display font-bold text-xl text-white">$24.5M</p>
-                </div>
-                <div className="bg-dark-900/80 p-5 rounded-2xl border border-white/5">
-                  <p className="text-xs text-gray-500 uppercase font-mono mb-1">Est. APR</p>
-                  <p className="font-display font-bold text-xl text-brand-400">14.2%</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div className="max-w-4xl mb-12">
+          <p className="text-brand-400 font-mono text-xs md:text-sm tracking-widest uppercase mb-4">Go To Market</p>
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 text-white">Positioning, Monetization, and Roadmap</h2>
+          <p className="text-lg text-gray-400 leading-relaxed">
+            Manual chat is the wedge, autonomous execution drives retention, and CLI composability expands developer and
+            agent adoption. Revenue is generated through platform and performance fees, with additional marketplace and API layers.
+          </p>
         </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
+          <div className="glass-panel rounded-2xl p-5 border border-white/10">
+            <p className="text-[11px] uppercase tracking-widest text-gray-500 font-mono mb-2">Mode 1</p>
+            <p className="text-lg font-display font-bold text-white mb-2">Manual Chat (Wedge)</p>
+            <p className="text-sm text-gray-400">Lowest trust threshold; captures first-time users with intent-based execution.</p>
+          </div>
+          <div className="glass-panel rounded-2xl p-5 border border-white/10">
+            <p className="text-[11px] uppercase tracking-widest text-gray-500 font-mono mb-2">Mode 2</p>
+            <p className="text-lg font-display font-bold text-white mb-2">Autonomous Yield (Retention)</p>
+            <p className="text-sm text-gray-400">Continuous policy-guarded portfolio operation increases stickiness and activity.</p>
+          </div>
+          <div className="glass-panel rounded-2xl p-5 border border-white/10">
+            <p className="text-[11px] uppercase tracking-widest text-gray-500 font-mono mb-2">Mode 3</p>
+            <p className="text-lg font-display font-bold text-white mb-2">CLI Runtime (Growth)</p>
+            <p className="text-sm text-gray-400">Composable agent runtime accelerates ecosystem and partner integrations.</p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 mb-10">
+          <article className="glass-panel rounded-[2rem] p-7 border border-brand-500/30 overflow-x-auto">
+            <h3 className="text-2xl font-display font-bold text-white mb-5">Why Us, Not Them</h3>
+            <table className="w-full min-w-[740px] text-sm">
+              <thead>
+                <tr className="text-left text-gray-400 border-b border-white/10">
+                  <th className="py-3 pr-3 font-mono text-[11px] uppercase tracking-wider">Capability</th>
+                  <th className="py-3 pr-3">Olas</th>
+                  <th className="py-3 pr-3">Virtuals</th>
+                  <th className="py-3 pr-3">Theoriq</th>
+                  <th className="py-3">AgenticFi</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonRows.map((row) => (
+                  <tr key={row.capability} className="border-b border-white/5">
+                    <td className="py-3 pr-3 text-gray-300">{row.capability}</td>
+                    <td className="py-3 pr-3 text-gray-500">{row.olas}</td>
+                    <td className="py-3 pr-3 text-gray-500">{row.virtuals}</td>
+                    <td className="py-3 pr-3 text-gray-500">{row.theoriq}</td>
+                    <td className="py-3 text-brand-200 font-medium">{row.agenticfi}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </article>
+
+          <article className="glass-panel rounded-[2rem] p-7 border border-accent-cyan/30">
+            <h3 className="text-2xl font-display font-bold text-white mb-5">Revenue Model</h3>
+            <div className="space-y-4 mb-6">
+              <div className="rounded-2xl border border-white/10 bg-dark-900/60 p-4">
+                <p className="text-[11px] uppercase tracking-widest font-mono text-gray-500 mb-2">Protocol Fees</p>
+                <p className="text-white font-semibold">20% platform fee on all agent fees</p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-dark-900/60 p-4">
+                <p className="text-[11px] uppercase tracking-widest font-mono text-gray-500 mb-2">Autonomous Fees</p>
+                <p className="text-white font-semibold">10% performance fee on autonomous yield</p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-dark-900/60 p-4">
+                <p className="text-[11px] uppercase tracking-widest font-mono text-gray-500 mb-2">Expansion</p>
+                <p className="text-white font-semibold">Featured listings, verification, enterprise API, white-label SDK</p>
+              </div>
+            </div>
+
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-left text-gray-400 border-b border-white/10">
+                  <th className="py-2 pr-3 font-mono text-[11px] uppercase tracking-wider">Daily Volume</th>
+                  <th className="py-2">Annualized Revenue</th>
+                </tr>
+              </thead>
+              <tbody>
+                {revenueScenarios.map((scenario) => (
+                  <tr key={scenario.volume} className="border-b border-white/5">
+                    <td className="py-3 pr-3 text-gray-300">{scenario.volume}</td>
+                    <td className="py-3 text-white font-medium">{scenario.annualized}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </article>
+        </div>
+
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 mb-8">
+          {roadmap.map((phase) => (
+            <article key={phase.week} className="glass-panel rounded-[2rem] p-6 border border-white/10">
+              <p className="text-[11px] uppercase tracking-widest font-mono text-brand-300 mb-3">{phase.week}</p>
+              <ul className="space-y-2 text-sm text-gray-300">
+                {phase.items.map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <span className="text-brand-400">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+
+        <article className="glass-panel rounded-[2rem] p-7 border border-white/10">
+          <h3 className="text-2xl font-display font-bold text-white mb-4">12-Month Targets</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="rounded-2xl border border-white/10 bg-dark-900/60 p-5">
+              <p className="text-[11px] uppercase tracking-widest font-mono text-gray-500 mb-2">3 Months</p>
+              <p className="text-white font-semibold mb-1">$5M TVL • 15+ agents</p>
+              <p className="text-xs text-gray-500">Platform integration and go-live completion.</p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-dark-900/60 p-5">
+              <p className="text-[11px] uppercase tracking-widest font-mono text-gray-500 mb-2">6 Months</p>
+              <p className="text-white font-semibold mb-1">$50M TVL • 30+ agents</p>
+              <p className="text-xs text-gray-500">Targeting $500K run-rate with stronger retention loops.</p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-dark-900/60 p-5">
+              <p className="text-[11px] uppercase tracking-widest font-mono text-gray-500 mb-2">12 Months</p>
+              <p className="text-white font-semibold mb-1">$500M TVL • 200+ agents</p>
+              <p className="text-xs text-gray-500">Targeting $5M+ annualized revenue trajectory.</p>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
   );
